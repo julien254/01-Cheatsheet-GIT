@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<meta charset="utf-8">
+		<title>Cheatsheet Git/GitHub</title>
+	</head>
+	<body>
+
+		<h1>Cheatsheet Git/GitHub</h1>
+
+		<h2>Commande basique</h2>
+			<ul>
+				<li><strong>$ git init :</strong>Initialiser un dossier .git dans le dossier courant.</li>
+				<li><strong>$ git status :</strong>Voir les fichiers à ajouter ou à commit.</li>
+				<li><strong>$ cat nom-du-ficher :</strong>Affiche le contenu du fichier nommer.</li>
+				<li><strong>$ git stash :</strong> Enregistrer les fichiers sans les commit.</li>
+				<li><strong>$ git stash pop :</strong> Recuperer les fichiers enregistrés.</li>
+			</ul>
+
+		<h2>Commit</h2>
+			<ul>
+				<li><strong>$ git add nom-du-fichier :</strong>Ajouter le fichier dans l'index de git.</li>
+				<li><strong>$ git commit -m "message pertinant d'écrivant les modification apporté au commit" :</strong> Commit tous les fichiers ajouter a l'index.-+</li>
+				<p>OU</p>
+				<li><strong>$ git commit -am "message pertinant d'écrivant les modification apporté au commit" :</strong> Ajouter a l'index et commit les fichier qui ont deja
+					etait rajouter une premiere foi.</li>
+				<li><strong>$ git log :</strong> Afficher l'historique des commits.</li>
+				<li><strong>$ git checkout sha-du-commit :</strong> Revenir au commit specifié.</li>
+				<li><strong>$ git checkout master :</strong> Revenir au dernier commit.</li>
+			</ul>
+
+		<h2>Github</h2>
+
+		<h3><strong>/!\Important/!\</strong></h3>
+		  <p>Avant de commit vos fichiers, il est trés important de "cacher" les fichiers sensible comme les mots de passe et les fichiers
+				inutile pour ne pas qu'ils soit visible sur le repository.</p>
+			<p>Pour ce faire il suffit de creer un fichier .gitignore et d'y inscrire le nom des fichier que vous ne voulais pas commit.</p>
+			<ul>
+				<li><strong>$ git push origin nom-de-la-branche-principale :</strong> Envoyer tous les commits sur Github.</li>
+				<li><strong>$ git pull origin nom-de-la-branche-principale :</strong> Récuperer les modifs sur Github.</li>
+				<li><strong>$ git blame nom-du-ficher :</strong> Voir qui a mofier le fichier.</li>
+				<li><strong>$ git show sha-du-commit :</strong> Connaitre les modifs en details du commit nommé.</li>
+			</ul>
+
+		<h2>Les Branches</h2>
+			<ul>
+				<li><strong>$ git branch nom-de-la-branche :</strong> Creer une branche.</li>
+				<li><strong>$ git checkout nom-de-la-branche :</strong> Changer de branche.</li>
+				<p>OU</p>
+				<li><strong>$ git checkout -b nom-de-la-branche :</strong> Creer une branche et aller dessus.</li>
+				<li><strong>$ git merge nom-de-la-branche :</strong> Fusionner la branche nommer avec la branche sur laquelle vous êtes.</li>
+
+		</ul>
+
+	</body>
+</html>
