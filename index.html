@@ -5,11 +5,19 @@
 		<meta charset="utf-8">
 		<title>Cheatsheet Git/GitHub</title>
 	</head>
-	<body>
+	<body id="retour-haut">
 
 		<h1>Cheatsheet Git/GitHub</h1>
 
-		<h2>Commande basique</h2>
+		<h2>Index</h2>
+			<ol>
+				<li><a href="#commande">Commande basique.</a></li>
+				<li><a href="#commit">Commit.</a></li>
+				<li><a href="#git">Git avec github.</a></li>
+				<li><a href="#branches">Les branches.</a></li>
+			</ol>
+
+		<h2 id="commande">1.Commande basique</h2>
 			<ul>
 				<li><strong>$ git init :</strong>Initialiser un dossier .git dans le dossier courant.</li>
 				<li><strong>$ git status :</strong>Voir les fichiers à ajouter ou à commit.</li>
@@ -18,7 +26,7 @@
 				<li><strong>$ git stash pop :</strong> Recuperer les fichiers enregistrés.</li>
 			</ul>
 
-		<h2>Commit</h2>
+		<h2 id="commit">2.Commit</h2>
 			<ul>
 				<li><strong>$ git add nom-du-fichier :</strong>Ajouter le fichier dans l'index de git.</li>
 				<li><strong>$ git commit -m "message pertinant d'écrivant les modification apporté au commit" :</strong> Commit tous les fichiers ajouter a l'index.-+</li>
@@ -30,7 +38,7 @@
 				<li><strong>$ git checkout master :</strong> Revenir au dernier commit.</li>
 			</ul>
 
-		<h2>Github</h2>
+		<h2 id="git">3.Git avec github</h2>
 
 		<h3><strong>/!\Important/!\</strong></h3>
 		  <p>Avant de commit vos fichiers, il est trés important de "cacher" les fichiers sensible comme les mots de passe et les fichiers
@@ -43,15 +51,14 @@
 				<li><strong>$ git show sha-du-commit :</strong> Connaitre les modifs en details du commit nommé.</li>
 			</ul>
 
-		<h2>Les Branches</h2>
+		<h2 id="branches">4.Les Branches</h2>
 			<ul>
 				<li><strong>$ git branch nom-de-la-branche :</strong> Creer une branche.</li>
 				<li><strong>$ git checkout nom-de-la-branche :</strong> Changer de branche.</li>
 				<p>OU</p>
 				<li><strong>$ git checkout -b nom-de-la-branche :</strong> Creer une branche et aller dessus.</li>
 				<li><strong>$ git merge nom-de-la-branche :</strong> Fusionner la branche nommer avec la branche sur laquelle vous êtes.</li>
-
 		</ul>
-
+		<footer><a href="#retour-haut">Haut de page</a></footer>
 	</body>
 </html>
