@@ -1,64 +1,92 @@
 <!DOCTYPE html>
 <html>
+                         <!-- HEAD -->
 	<head>
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="css/style.css" media="screen">
+		<link rel="shortcut icon" type="image/png" href="images/fleche.png" /> <!-- Favicon -->
 		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 		<title>Cheatsheet Git/GitHub</title>
 	</head>
+						  <!-- BODY -->
 	<body id="retour-haut">
 
-		<h1>Cheatsheet Git/GitHub</h1>
-
-		<h2>Index</h2>
+		<header>
+			<h1>Cheatsheet Git/GitHub</h1>
+		</header>
+					    <!-- ACHOR MENU -->
+		<nav>
+			<h2 class="ContourNoir">Index</h2>
 			<ol>
-				<li><a href="#commande">Commande basique.</a></li>
-				<li><a href="#commit">Commit.</a></li>
-				<li><a href="#git">Git avec github.</a></li>
-				<li><a href="#branches">Les branches.</a></li>
+				<li><a class="ContourGris"  href="#commande">1. Commande basique.</a></li>
+				<li><a class="ContourGris" href="#commit">2. Commit.</a></li>
+				<li><a class="ContourGris" href="#git">3. Git avec github.</a></li>
+				<li><a class="ContourGris" href="#branches">4. Les branches.</a></li>
 			</ol>
-
-		<h2 id="commande">1.Commande basique</h2>
+		</nav>
+						<!--   SECTION   -->
+		<section>
+			<h2 class="ContourNoir" id="commande">1.Commande basique</h2>
 			<ul>
-				<li><strong>$ git init :</strong>Initialiser un dossier .git dans le dossier courant.</li>
-				<li><strong>$ git status :</strong>Voir les fichiers à ajouter ou à commit.</li>
-				<li><strong>$ cat nom-du-ficher :</strong>Affiche le contenu du fichier nommer.</li>
-				<li><strong>$ git stash :</strong> Enregistrer les fichiers sans les commit.</li>
-				<li><strong>$ git stash pop :</strong> Recuperer les fichiers enregistrés.</li>
+				<li><code class="codedecalandroid">$ git init :</code><dfn>Initialiser un dossier .git dans le dossier courant.</dfn></li>
+				<li><code class="codedecalandroid">$ git status :</code><dfn>Voir les fichiers à ajouter ou à commit.</dfn></li>
+				<li><code class="codedecalandroid">$ cat nom-du-ficher :</code><dfn>Affiche le contenu du fichier nommer.</dfn></li>
+				<li><code class="codedecalandroid">$ git stash :</code><dfn>Enregistrer les fichiers sans les commit.</dfn></li>
+				<li><code class="codedecalandroid">$ git stash pop :</code><dfn>Recuperer les fichiers enregistrés.</dfn></li>
 			</ul>
 
-		<h2 id="commit">2.Commit</h2>
+		<hr/>
+
+			<h2 class="ContourNoir" id="commit">2.Commit</h2>
 			<ul>
-				<li><strong>$ git add nom-du-fichier :</strong>Ajouter le fichier dans l'index de git.</li>
-				<li><strong>$ git commit -m "message pertinant d'écrivant les modification apporté au commit" :</strong> Commit tous les fichiers ajouter a l'index.-+</li>
-				<p>OU</p>
-				<li><strong>$ git commit -am "message pertinant d'écrivant les modification apporté au commit" :</strong> Ajouter a l'index et commit les fichier qui ont deja
-					etait rajouter une premiere foi.</li>
-				<li><strong>$ git log :</strong> Afficher l'historique des commits.</li>
-				<li><strong>$ git checkout sha-du-commit :</strong> Revenir au commit specifié.</li>
-				<li><strong>$ git checkout master :</strong> Revenir au dernier commit.</li>
+				<li><code class="codedecalandroid">$ git add nom-du-fichier :</code><dfn>Ajouter le fichier dans l'index de git.</dfn></li>
+				<li><code class="codedecal">$ git commit -m "message pertinant décrivant les modifications apporté au fichier" :</code><dfn>Commit tous les fichiers ajouter a l'index.</dfn></li>
+			</ul>
+			<p class="ou">OU</p>
+			<ul>
+				<li><code class="codedecal">$ git commit -am "message pertinant décrivant les modifications apporté au fichier" :</code><dfn>Ajouter a l'index et commit les fichier qui ont deja etait rajouter une premiere foi.</dfn></li>
+				<li><code class="codedecalandroid">$ git log :</code><dfn>Afficher l'historique des commits.</dfn></li>
+				<li><code class="codedecalandroid">$ git checkout sha-du-commit :</code><dfn>Revenir au commit specifié.</dfn></li>
+				<li><code class="codedecalandroid">$ git checkout master :</code><dfn>Revenir au dernier commit.</dfn></li>
 			</ul>
 
-		<h2 id="git">3.Git avec github</h2>
+		<hr/>
 
-		<h3><strong>/!\Important/!\</strong></h3>
-		  <p>Avant de commit vos fichiers, il est trés important de "cacher" les fichiers sensible comme les mots de passe et les fichiers
-				inutile pour ne pas qu'ils soit visible sur le repository.</p>
-			<p>Pour ce faire il suffit de creer un fichier .gitignore et d'y inscrire le nom des fichier que vous ne voulais pas commit.</p>
+			<h2 class="ContourNoir" id="git">3.Git avec github</h2>
+
+			<h3 class="ContourNoir">/!\Important/!\</h3>
+			<p class="ContourNoir">Avant de commit vos fichiers, il est trés important de "cacher" les fichiers sensible comme les mots de passe et les fichiers inutile pour ne pas qu'ils soit visible sur le repository.</p>
+			<p class="ContourNoir" id="pmargin">Pour ce faire il suffit de creer un fichier .gitignore et d'y inscrire le nom des fichier que vous ne voulais pas commit.</p>
 			<ul>
-				<li><strong>$ git push origin nom-de-la-branche-principale :</strong> Envoyer tous les commits sur Github.</li>
-				<li><strong>$ git pull origin nom-de-la-branche-principale :</strong> Récuperer les modifs sur Github.</li>
-				<li><strong>$ git blame nom-du-ficher :</strong> Voir qui a mofier le fichier.</li>
-				<li><strong>$ git show sha-du-commit :</strong> Connaitre les modifs en details du commit nommé.</li>
+				<li><code class="codedecal">$ git push origin nom-de-la-branche-principale :</code><dfn>Envoyer tous les commits sur Github.</dfn></li>
+				<li><code class="codedecal">$ git pull origin nom-de-la-branche-principale :</code><dfn>Récuperer les modifs sur Github.</dfn></li>
+				<li><code class="codedecalandroid">$ git blame nom-du-ficher :</code><dfn>Voir qui a mofier le fichier.</dfn></li>
+				<li><code class="codedecalandroid">$ git show sha-du-commit :</code><dfn>Connaitre les modifs en details du commit nommé.</dfn></li>
 			</ul>
 
-		<h2 id="branches">4.Les Branches</h2>
+		<hr/>
+			<h2 class="ContourNoir" id="branches">4.Les Branches</h2>
 			<ul>
-				<li><strong>$ git branch nom-de-la-branche :</strong> Creer une branche.</li>
-				<li><strong>$ git checkout nom-de-la-branche :</strong> Changer de branche.</li>
-				<p>OU</p>
-				<li><strong>$ git checkout -b nom-de-la-branche :</strong> Creer une branche et aller dessus.</li>
-				<li><strong>$ git merge nom-de-la-branche :</strong> Fusionner la branche nommer avec la branche sur laquelle vous êtes.</li>
-		</ul>
-		<footer><a href="#retour-haut">Haut de page</a></footer>
+				<li><code class="codedecalandroid">$ git branch nom-de-la-branche :</code><dfn>Creer une branche.</dfn></li>
+				<li><code class="codedecalandroid">$ git checkout nom-de-la-branche :</code><dfn>Changer de branche.</dfn></li>
+			</ul>
+			<p class="ou">OU</p>
+			<ul>
+				<li><code class="codedecalandroid">$ git checkout -b nom-de-la-branche :</code><dfn>Creer une branche et aller dessus.</dfn></li>
+				<li><code class="codedecalandroid">$ git merge nom-de-la-branche :</code><dfn>Fusionner la branche nommer avec la branche sur laquelle vous êtes.</dfn></li>
+			</ul>
+
+		</section>
+							<!-- FOOTER -->
+		<footer>
+
+			<img id="img1" src="images/fleche_haut.png" alt="fléche" />
+
+			<a class="ContourNoir" href="#retour-haut">Haut de page</a>
+
+			<img id="img2"src="images/fleche_haut.png" alt="fléche" />
+
+		</footer>
 	</body>
+
 </html>
